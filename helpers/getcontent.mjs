@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import contentful from 'contentful';
 
-const SPACE = 'lqaxjalebly8';
-const TOKEN = 'bcfeee6eddceff1f3d3348c37207bb98672fb28d75c8b2aa1eb5b21f85ce9375';
+const SPACE = process.env.CONTENTFUL_SPACE;
+const TOKEN = process.env.CONTENTFUL_TOKEN;
 
 const client = contentful.createClient({
   space: SPACE,
