@@ -11,7 +11,7 @@ const client = contentful.createClient({
 })
 
 const types = [
-  'job', 'user'
+'user'
 ]
 
 export const getcontent = async () => {
