@@ -6,7 +6,7 @@ const Company = ({ name, description, position, startDate, endDate, isCurrent, p
 	<div className="company">
 		<div className="cv-record__heading">
 			<div className="cv-record__position">
-				<strong>{position}</strong>-{name}
+				<strong>✅{position}</strong> in {name}
 			</div>
 			<div className="cv-record__dates">
 				<Period from={startDate} to={endDate} isCurrent={isCurrent} />
@@ -24,6 +24,7 @@ const Company = ({ name, description, position, startDate, endDate, isCurrent, p
 		<style jsx>{`
 			.company {
 				margin-top: 32px;
+				margin-bottom: 32px;
 			}
 		`}</style>
 	</div>
