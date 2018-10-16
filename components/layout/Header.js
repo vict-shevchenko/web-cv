@@ -8,14 +8,21 @@ const headStyle = {
 
 const Header = () => (
   <div style={headStyle}>
-    <Link href="/">
-      <a>Home</a>
-    </Link>
-    <Link href="/about">
-      <a>About</a>
-    </Link>
+    <div className="links">
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+    </div>
 
     <style jsx>{`
+      .links {
+        max-width: 992px;
+        margin: 0 auto
+      }
+
       a {
         height: 100%;
         padding: 25px 24px 0;

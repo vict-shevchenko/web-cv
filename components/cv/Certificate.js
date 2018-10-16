@@ -1,5 +1,5 @@
-import Period from './Period';
-import formatDate from '../helpers/date';
+import Period from '../helpers/Period';
+import formatDate from '../../helpers/date';
 
 const Certificate = ({name, receiveDate}) => (
 	<div className="cv-record">

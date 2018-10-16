@@ -11,37 +11,43 @@ const Layout = (props) => (
 			.content {
 				max-width: 992px;
 				margin: 0 auto 32px;
-				padding: 24px;
 			}
     `}</style>
 
 		<style jsx global>{`
-			a {
+			html {
+				font-size: 18px;
+			}
+
+			a, div {
 				box-sizing: border-box;
 			}
 
       body {
 				margin: 0;
 				padding: 0;
-				font-family: 'Open Sans', sans-serif;
+				font-family: 'Lato', sans-serif;
 				color: #222;
 			}
 
 			p {
 				line-height: 1.428;
+				margin-top: 0.5em;
+			}
+
+			h1, h2 {
+				color: #7400ff;
 			}
 
 			h1 {
 				font-size: 64px;
 				line-height: 68px;
-				color: #7400ff;
-				text-align: right
 			}
 
 			h2 {
-				font-size: 48px;
-				line-height: 48px;
-				color: #34495e;
+				font-size: 44px;
+				line-height: 44px;
+				font-weight: 300;
 			}
 
 			h3 {
@@ -52,20 +58,23 @@ const Layout = (props) => (
 			}
 
 			h4 {
-
+				font-size: 22px;
+				margin-top: 1em;
+				margin-bottom: 0;
 			}
 
 			.cv-record {
-				margin-bottom: 16px;
+				margin-top: 32px;
 			}
 
 			.cv-record__heading {
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 			}
 
 			.cv-record__position {
-				font-size: 18px;
+				flex: 1 0 60%;
 			}
 
 			.cv-record__dates {

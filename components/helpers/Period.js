@@ -1,4 +1,4 @@
-import formatDate from '../helpers/date';
+import formatDate from '../../helpers/date';
 
 const Period = ({from, to, isCurrent}) => (
 	<div className="period">
@@ -6,7 +6,7 @@ const Period = ({from, to, isCurrent}) => (
 
 		<style jsx>{`
 			.period {
-				color: #ccc;
+				color: #b0b0b0;
 			}
 		`}</style>
 	</div>	

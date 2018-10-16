@@ -1,13 +1,14 @@
 import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
 import profile from '../data/user';
-import Layout from '../components/Layout.js';
-import Company from '../components/Company.js';
-import Project from '../components/Project.js';
-import Education from '../components/Education.js';
-import Certificate from '../components/Certificate.js';
-import Language from '../components/Language.js';
-import Indent from '../components/Indent';
+import Layout from '../components/layout//Layout.js';
+import ResumeSection from '../components/layout/ResumeSection.js'
+import Company from '../components/cv/Company.js';
+import Project from '../components/cv/Project.js';
+import Education from '../components/cv/Education.js';
+import Certificate from '../components/cv/Certificate.js';
+import Language from '../components/cv/Language.js';
+import Indent from '../components/layout/Indent';
 
 const Index = () => (
   <div>
@@ -16,35 +17,35 @@ const Index = () => (
       <title>Viktor Shevchenko Resume</title>
       <meta name="description" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
     </Head>
     <Layout>
       <h1>{profile.fullName}</h1>
-      <h2>Skills and Expertise</h2>
-      <Indent>
+      <ResumeSection title="Skills and Expertise">
         <ReactMarkdown source={profile.skills}> </ReactMarkdown>
-      </Indent>
-      <h2>Experience</h2>
-      <Indent>
+      </ResumeSection>
+
+      <ResumeSection title="Experience">
         {profile.experience.map(company => <Company key={company.sys.id} {...company.fields}/>)}
-      </Indent>
-      <h2>Personal Projects</h2>
-      <Indent>
+      </ResumeSection>
+
+      <ResumeSection title="Personal Projects">
         {profile.myProjects.map(project => <Project key={project.sys.id} {...project.fields}/>)}
-      </Indent>
-      <h2>Education</h2>
-      <Indent>
-        {profile.education.map(education => <Education key={education.sys.id} {...education.fields}/>)}
-      </Indent>
-      <h2>Certificates</h2>
-      <Indent>
-        {profile.certificates.map(certificate => <Certificate key={certificate.sys.id} {...certificate.fields}/>)}
-      </Indent>
-      <h2>Languages</h2>
-      <Indent>
-        {profile.languages.map(language => <Language key={language.sys.id} {...language.fields}/>)}
-      </Indent>
+      </ResumeSection>
       
+      <ResumeSection title="Education">
+        {profile.education.map(education => <Education key={education.sys.id} {...education.fields}/>)}
+      </ResumeSection>
+
+      <ResumeSection title="Certificates">
+        {profile.certificates.map(certificate => <Certificate key={certificate.sys.id} {...certificate.fields}/>)}
+      </ResumeSection>
+
+      <ResumeSection title="Languages">
+        <div>
+          {profile.languages.map(language => <Language key={language.sys.id} {...language.fields}/>)}
+        </div>
+      </ResumeSection>
     </Layout>
   </div>
 )

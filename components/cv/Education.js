@@ -1,7 +1,7 @@
-import Period from './Period';
+import Period from '../helpers/Period';
 
 const Education= ({name, description, startDate, endDate}) => (
-	<div>
+	<div className="cv-record">
 		<div className="cv-record__heading">
 			<div className="cv-record__position">
 				<strong>{name}</strong>

@@ -4,7 +4,7 @@ export default ({children}) => (
 
 		<style jsx>{`
 			.indent {
-				padding-left: 48px;
+				padding-left: 24px;
 			}
     `}</style>
 	</div>
