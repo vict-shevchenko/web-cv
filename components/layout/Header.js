@@ -9,11 +9,11 @@ const headStyle = {
 const Header = () => (
   <div style={headStyle}>
     <div className="links">
-      <Link href="/">
-        <a>Home</a>
+      <Link href="/cv">
+        <a className="link">CV</a>
       </Link>
-      <Link href="/about">
-        <a>About</a>
+      <Link href="/">
+        <a className="link">About</a>
       </Link>
     </div>
 
@@ -23,7 +23,8 @@ const Header = () => (
         margin: 0 auto
       }
 
-      a {
+      a.link {
+        color: #222;
         height: 100%;
         padding: 25px 24px 0;
         display: inline-block;
@@ -31,7 +32,7 @@ const Header = () => (
         text-decoration: none;
       }
 
-      a:hover {
+      a.link:hover {
         color: #7400ff;
       }
     `}</style>

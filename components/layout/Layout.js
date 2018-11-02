@@ -29,6 +29,16 @@ const Layout = (props) => (
 				font-family: 'Lato', sans-serif;
 				color: #222;
 			}
+			
+			a, a:focus, a:visited {
+				color: #f54b5e;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
 
 			p {
 				line-height: 1.428;
