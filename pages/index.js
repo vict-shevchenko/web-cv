@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import profile from '../data/user';
 import Layout from '../components/layout/Layout.js';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown'
 
 export default () => (
   <div>
@@ -13,7 +13,7 @@ export default () => (
       <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
     </Head>
     <Layout>
-      <div className="about"><ReactMarkdown source={profile.about}> </ReactMarkdown></div>
+      <div className="about"><Markdown>{profile.about}</Markdown></div>
     </Layout>
 
     <style jsx>{`

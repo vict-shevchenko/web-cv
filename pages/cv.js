@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import Head from 'next/head';
 import profile from '../data/user';
 import Layout from '../components/layout//Layout.js';
@@ -22,7 +22,7 @@ const CV = () => (
     <Layout>
       <h1>{profile.fullName}</h1>
       <ResumeSection title="Skills and Expertise">
-        <ReactMarkdown source={profile.skills}> </ReactMarkdown>
+        <Markdown>{profile.skills}</Markdown>
       </ResumeSection>
 
       <ResumeSection title="Experience">
