@@ -6,7 +6,7 @@ const Project = ({name, shortDescription, description, startDate, endDate, isCur
 	<div className="cv-record">
 		<div className="cv-record__heading">
 			<div>
-				✅<strong>{name}</strong> {shortDescription ? `(${shortDescription})` : ''}
+				✅{' '}<strong>{name}</strong> {shortDescription ? `(${shortDescription})` : ''}
 			</div>
 			<div className="cv-record__dates">
 				<Period from={startDate} to={endDate} isCurrent={isCurrent} />
