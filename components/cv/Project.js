@@ -1,5 +1,5 @@
 import Period from '../helpers/Period';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import Indent from '../layout/Indent';
 
 const Project = ({name, shortDescription, description, startDate, endDate, isCurrent, responsibilities, technologies}) => (
@@ -14,11 +14,11 @@ const Project = ({name, shortDescription, description, startDate, endDate, isCur
 		</div>
 		<Indent>
 			<div>
-				<ReactMarkdown source={description} />
+				<Markdown>{description}</Markdown>
 			</div>
 			{responsibilities && <div>
 				<i>Responsibilities:</i>
-				<ReactMarkdown source={responsibilities} />
+				<Markdown>{responsibilities}</Markdown>
 			</div>}
 			<div>
 				<i>Technologies and tools:</i><br/>
